@@ -1,0 +1,154 @@
+.item-imgs {
+  display: flex;
+  width: 432px;
+  flex-wrap: wrap;
+  margin-top: 62px;
+  margin-left: 23px;
+}
+.active-img {
+  width: 280px;
+  height: 280px;
+}
+.alt-img {
+  width: 70px;
+  height: 70px;
+}
+.arrow {
+  height: 36px;
+  width: 36px;
+  background-position: center;
+  background-color: #fff;
+  cursor: pointer;
+}
+.left {
+  background-image: url("../img/icons/arrow-left.svg");
+}
+.right {
+  background-image: url("../img/icons/arrow-right.svg");
+}
+.main-img {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: 100%;
+}
+.mini-img {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-around;
+}
+/*Поработать с фоном, потому что он нормально не маштабируется*/
+.product-info {
+  display: flex;
+  flex-wrap: wrap;
+  width: 660px;
+  margin-top: 62px;
+  margin-left: 35px;
+}
+
+.top-block,
+.middle-block,
+.bottom-block {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 100%;
+}
+.top-block {
+  width: 581px;
+  margin: 21px 37px 56px 42px;
+}
+.item-name {
+  font-size: 28px;
+  line-height: 200%;
+  letter-spacing: 0.15em;
+  font-weight: 400;
+}
+.item-cost {
+  font-size: 28px;
+  line-height: 200%;
+  letter-spacing: 0.15em;
+  font-weight: 400;
+  text-decoration: underline;
+}
+.middle-block {
+  flex-wrap: wrap;
+  width: 584px;
+  margin: 0 34px 75px 42px;
+}
+.dop-info {
+  flex-basis: 50%;
+  font-size: 12px;
+  line-height: 200%;
+  letter-spacing: 0.15em;
+  font-weight: 200;
+  margin-bottom: 7px;
+}
+.dop-inf-right {
+  text-align: right;
+}
+.bottom-block {
+  align-items: center;
+  width: 607px;
+  margin: 0 11px 37px 42px;
+}
+.sklad {
+  font-size: 14px;
+  line-height: 200%;
+  letter-spacing: 0.15em;
+  font-weight: 300;
+}
+.kolvo {
+  font-weight: 400;
+}
+.kolvo-tovarov {
+  display: flex;
+  align-items: center;
+  width: 64px;
+  justify-content: space-between;
+}
+.minus,
+.plus {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.vibor-kolvo {
+  display: block;
+  text-align: center;
+  width: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.buy {
+  width: 205px;
+  height: 50px;
+  font-size: 14px;
+  line-height: 200%;
+  letter-spacing: 0.1em;
+  justify-content: center;
+  margin: 0;
+}
+.buy:hover {
+  background-repeat: no-repeat;
+}
+.item-about {
+  margin: 84px 32px 44px 43px;
+}
+.about-game {
+  margin-bottom: 10px;
+  font-size: 24px;
+  line-height: 200%;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+}
+.subcharp {
+  font-size: 18px;
+  line-height: 200%;
+  letter-spacing: 0.15em;
+}
+.desc {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 200%;
+  letter-spacing: 0.15em;
+  font-weight: 300;
+}

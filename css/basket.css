@@ -1,0 +1,282 @@
+.prds {
+  margin-bottom: 32px;
+}
+.naming-row {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5px 50px 20px 350px;
+  text-align: center;
+  list-style: none;
+}
+.naming-row li {
+  font-size: 16px;
+  line-height: 200%;
+  letter-spacing: 0.15em;
+}
+.prds-in-bsk {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  margin: 0 100px;
+}
+.prds-in-bsk .grad-brd {
+  margin-bottom: 20px;
+}
+.prd-in-bsk {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 40px 20px 26px;
+  align-items: center;
+  justify-content: space-between;
+}
+.prd-in-bsk .product-img {
+  width: 180px;
+  height: 180px;
+}
+.prd-in-bsk .product-name,
+.prd-in-bsk .product-price {
+  font-size: 18px;
+  letter-spacing: 0.15em;
+  line-height: 200%;
+  font-weight: 400;
+  text-decoration: none;
+}
+.kolvo-tovarov {
+  display: flex;
+  align-items: center;
+  width: 64px;
+  justify-content: space-between;
+}
+.minus,
+.plus {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.vibor-kolvo {
+  display: block;
+  text-align: center;
+  width: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.Kupon-block {
+  margin-bottom: 96px;
+}
+.Kupon {
+  display: flex;
+  flex-basis: 100%;
+  margin-right: 100px;
+  justify-content: flex-end;
+}
+.kupon-text {
+  width: 257px;
+  padding: 19px 0 19px 20px;
+  border: 2px solid #000;
+}
+.kupon-text::placeholder {
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  font-weight: 400;
+}
+.btn-kupon {
+  width: 205px;
+  font-size: 18px;
+  line-height: 200%;
+  color: #fff;
+  background-color: #000;
+  justify-content: center;
+}
+.sub-zagalovok {
+  font-size: 28px;
+  line-height: 200%;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  flex-basis: 100%;
+  padding: 8px 0 33px 18px;
+}
+.vibor-dostavki {
+  margin: 0 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.slayder {
+  margin-right: 150px;
+  margin-bottom: 32px;
+}
+.sposob {
+  width: 258px;
+}
+.sposob span,
+.sposob label {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 166%;
+  letter-spacing: 0.15em;
+}
+label.black-circle {
+  padding-left: 10px;
+}
+.slayder-tochki + label.black-circle::before {
+  top: 4px;
+  left: -10px;
+  border: 2px solid #000;
+}
+.slayder-tochki:checked + label.black-circle::before {
+  background-image: url("../img/icons/black-circle.svg");
+}
+.sposob li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 20px;
+}
+.poisk {
+  display: flex;
+  width: 432px;
+  height: 30px;
+}
+.poisk-stroka {
+  flex-basis: 100%;
+  border: 2px solid #000;
+  box-sizing: border-box;
+  padding-left: 10px;
+}
+.dop-info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 90%;
+  margin-bottom: 37px;
+}
+.name-dop {
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 166%;
+  letter-spacing: 0.15em;
+  font-weight: 400;
+}
+.text-area {
+  box-sizing: border-box;
+  height: 140px;
+  flex-basis: 100%;
+  resize: none;
+  outline: none;
+  padding: 5px;
+  border: 2px solid #000;
+}
+fieldset {
+  margin: 48px 0;
+}
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-basis: 100%;
+  margin: 0 100px;
+}
+.polay {
+  display: flex;
+  flex-direction: column;
+  height: 194px;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+  margin-bottom: 37px;
+}
+.polay-vvod {
+  width: 212px;
+  height: 30px;
+  padding: 2px;
+  border: 2px solid #000;
+  box-sizing: border-box;
+}
+.pol-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+.pol-group label {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 200%;
+  letter-spacing: 0.15em;
+  flex-basis: 100%;
+  margin-bottom: 4px;
+}
+.star {
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 200%;
+  letter-spacing: 0.15em;
+  margin-top: 38px;
+}
+.sogl {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  flex-basis: 40%;
+  margin-bottom: 37px;
+}
+.checkbox {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  line-height: 200%;
+  font-weight: 300;
+  margin: 24px 0;
+  padding-left: 22px;
+}
+.checkbox::before {
+  content: "";
+  height: 14px;
+  width: 14px;
+  border: 2px solid;
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  left: -8px;
+  vertical-align: middle;
+}
+#ofert:checked + .checkbox::before,
+#pers-data:checked + .checkbox::before {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/icons/black-rec.svg");
+  background-size: 8px 8px;
+}
+#ofert,
+#pers-data {
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -1;
+}
+.pay {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-basis: 100%;
+  margin: 0 100px;
+}
+.pay .slayder {
+  margin-right: 0;
+  flex-basis: 40%;
+}
+.about-pay {
+  margin-bottom: 37px;
+  flex-basis: 40%;
+}
+.cnt2 {
+  justify-content: center;
+}
+.btn-accept {
+  width: 263px;
+  height: 50px;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 200%;
+  letter-spacing: 0.15em;
+  margin-bottom: 279px;
+}
+
+.btn-accept:hover {
+  background: #000;
+  color: #fff;
+}
