@@ -21,11 +21,11 @@ for (let buttonAddToBasket of buttonsAddToBasket) {
   };
 }
 function swapStates(event) {
-  if (event.classList.contains("trash-btn")) {
-    event.classList.remove("trash-btn");
+  if (event.classList.contains("delete-btn")) {
+    event.classList.remove("delete-btn");
     event.textContent = "Добавить в корзину";
   } else {
-    event.classList.add("trash-btn");
+    event.classList.add("delete-btn");
     event.textContent = "Удалить из корзины";
   }
   return;
