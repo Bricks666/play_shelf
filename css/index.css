@@ -2,46 +2,109 @@
 .zagalovok-new {
   color: #fff;
   line-height: 100%;
-  box-shadow: 4px 4px 4px 0px #000000 25%;
+  text-shadow: rgb(0, 0, 0) 0px 0px 8px;
   position: absolute;
   top: 53px;
   left: 38px;
-  z-index: 1;
+  /*Чтобы было видно на слайдере(у врубленного z-index = 1)*/
+  z-index: 2;
   cursor: default;
 }
 .new-items .container {
   position: relative;
   padding: 0;
+  padding-top: 30px;
 }
-.new-item {
-  width: 1200px;
-  height: 500px;
-  margin: 30px 0;
-  background-color: #eecbcb;
+.new-products {
+  /*Наследуем родительское позиционирование, чтобы не писать повторно*/
+  position: inherit;
+  /*Наследуем ширину*/
+  flex-basis: 100%;
+  /*Только ручками можно задать*/
+  height: 550px;
+  margin-bottom: 30px;
+}
+.new-product {
+  /*Позиционирования, чтобы слайды прятались друг за другом,
+   а не строились в пустой ряд*/
+  position: absolute;
+  display: block;
+  /*Только через проценты работает нормально*/
+  width: 100%;
+  height: 100%;
+  /*чтобы невыбранные слайды были спрятаны за выбранным*/
+  z-index: 0;
+  /*По смене данного свойства происходит плавность анимации*/
+  opacity: 0;
+  background-color: #efeaf3;
+  /*Настройка фона слайда*/
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  /*Плавное переключение слайдов*/
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+  transition-delay: 0.3s;
+}
+/*Подключение фона к слайдам*/
+.new-product:nth-of-type(1) {
+  background-image: url("../img/picture/new-product-1.jpg");
+}
+.new-product:nth-of-type(2) {
+  background-image: url("../img/picture/new-product-2.jpg");
+}
+.new-product:nth-of-type(3) {
+  background-image: url("../img/picture/new-product-3.jpg");
+}
+.new-product:nth-of-type(4) {
+  background-image: url("../img/picture/new-product-4.jpg");
+}
+.new-product:nth-of-type(5) {
+  background-image: url("../img/picture/new-product-5.jpg");
 }
 .slayder {
-  margin: 0 506px 30px;
+  margin: 0 auto 30px;
   display: flex;
   justify-content: space-between;
-  width: 188px;
+  /*Иного способа не нашел*/
+  width: 144px;
 }
-.slayder-tochki + label.red-circle::before {
+/*Описание обводок декаротивныйх точек*/
+.slayder label.red-circle::before {
   border: 2px solid #ff3333;
 }
-.slayder-tochki + label.purple-circle::before {
+.slayder label.purple-circle::before {
   border: 2px solid #6633cc;
 }
-.slayder-tochki + label.yellow-circle::before {
+.slayder label.yellow-circle::before {
   border: 2px solid #ffcc33;
 }
-.slayder-tochki:checked + label.red-circle::before {
+/*Реализация подстветка выбранного пункта */
+#new-product-1:checked ~ .slayder label:nth-of-type(1)::before,
+#new-product-5:checked ~ .slayder label:nth-of-type(5)::before,
+.slayder label.red-circle:hover::before {
   background-image: url("../img/icons/circle-red.svg");
 }
-.slayder-tochki:checked + label.purple-circle::before {
+#new-product-2:checked ~ .slayder label:nth-of-type(2)::before,
+#new-product-4:checked ~ .slayder label:nth-of-type(4)::before,
+.slayder label.purple-circle:hover::before {
   background-image: url("../img/icons/circle-purple.svg");
 }
-.slayder-tochki:checked + label.yellow-circle::before {
+#new-product-3:checked ~ .slayder label:nth-of-type(3)::before,
+.slayder label.yellow-circle:hover::before {
   background-image: url("../img/icons/circle-yellow.svg");
+}
+/*Реализация переключения картинок*/
+#new-product-1:checked ~ .new-products a:nth-of-type(1),
+#new-product-2:checked ~ .new-products a:nth-of-type(2),
+#new-product-3:checked ~ .new-products a:nth-of-type(3),
+#new-product-4:checked ~ .new-products a:nth-of-type(4),
+#new-product-5:checked ~ .new-products a:nth-of-type(5) {
+  /*Выводим на первый план*/
+  z-index: 1;
+  /*Выключаем прозрачность*/
+  opacity: 1;
 }
 
 /*О нас*/

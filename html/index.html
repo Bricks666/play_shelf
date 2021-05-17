@@ -74,48 +74,54 @@
       <section class="new-items">
         <div class="container">
           <h2 class="zagalovok zagalovok-new">Новинки</h2>
-          <a href="#" class="novinka"
-            ><img
-              src="../img/picture/Синий задумался.png"
-              alt="Novinka"
-              class="new-item"
-          /></a>
-          <!-- ༼ つ ◕◕ ༽つ Ссылочку сюды-->
+          <!--Физические переключатели(скрыты)-->
+          <input
+            type="radio"
+            name="slayder"
+            class="slayder-tochki"
+            id="new-product-1"
+            checked
+          />
+          <input
+            type="radio"
+            name="slayder"
+            class="slayder-tochki"
+            id="new-product-2"
+          />
+          <input
+            type="radio"
+            name="slayder"
+            class="slayder-tochki"
+            id="new-product-3"
+          />
+          <input
+            type="radio"
+            name="slayder"
+            class="slayder-tochki"
+            id="new-product-4"
+          />
+          <input
+            type="radio"
+            name="slayder"
+            class="slayder-tochki"
+            id="new-product-5"
+          />
+          <!--Переключаемый контент-->
+          <div class="new-products">
+            <a href="#" class="new-product"></a>
+            <a href="#" class="new-product"></a>
+            <a href="#" class="new-product"></a>
+            <a href="#" class="new-product"></a>
+            <a href="#" class="new-product"></a>
+          </div>
+
+          <!--Декоротивные переключатели-->
           <div class="slayder">
-            <input
-              type="radio"
-              name="slayder"
-              class="slayder-tochki"
-              id="item-1"
-              checked
-            /><label class="red-circle" for="item-1"></label>
-            <input
-              type="radio"
-              name="slayder"
-              class="slayder-tochki"
-              id="item-2"
-            /><label class="purple-circle" for="item-2"></label>
-            <input
-              type="radio"
-              name="slayder"
-              class="slayder-tochki"
-              id="item-3"
-            />
-            <label class="yellow-circle" for="item-3"></label>
-            <input
-              type="radio"
-              name="slayder"
-              class="slayder-tochki"
-              id="item-4"
-            />
-            <label class="purple-circle" for="item-4"></label>
-            <input
-              type="radio"
-              name="slayder"
-              class="slayder-tochki"
-              id="item-5"
-            />
-            <label class="red-circle" for="item-5"></label>
+            <label class="red-circle" for="new-product-1"></label>
+            <label class="purple-circle" for="new-product-2"></label>
+            <label class="yellow-circle" for="new-product-3"></label>
+            <label class="purple-circle" for="new-product-4"></label>
+            <label class="red-circle" for="new-product-5"></label>
           </div>
         </div>
       </section>

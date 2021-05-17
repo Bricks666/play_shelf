@@ -409,12 +409,9 @@ header .container {
   background-color: #fff;
 }
 .slayder-tochki {
-  position: absolute;
-  width: 0;
-  height: 0;
-  z-index: -1;
+  display: none;
 }
-.slayder-tochki + label::before {
+.slayder label::before {
   content: "";
   display: inline-block;
   position: relative;
@@ -426,7 +423,12 @@ header .container {
   box-sizing: border-box;
   border-radius: 50%;
   cursor: pointer;
-}
+  /*Почему то не работает плавное появления изображения */
+  /* transition-property: background-image;
+  transition-duration: 2s;
+  transition-timing-function: ease-in;
+  transition-delay: 0;
+} */
 /*
 оптимизироать количество кассов(проверить на повторение)
 (；￣Д￣)сделать блок новинок(￣ ￣|||)
