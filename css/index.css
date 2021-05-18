@@ -119,8 +119,3 @@
   line-height: 200%;
   letter-spacing: 0.15em;
 }
-/*Чтобы градиент отображался после отступа контейнера*/
-main .container:last-of-type {
-  margin-bottom: 0;
-  padding-bottom: 46px;
-}

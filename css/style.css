@@ -382,6 +382,7 @@ header .container {
   color: #fff;
   background-image: url("../img/icons/busket_white.svg");
 }
+/*Появляющийся после добавления крест удаления из корзины*/
 .delete-btn {
   background-image: url("../img/icons/close.svg");
 }
@@ -389,24 +390,18 @@ header .container {
   background-image: url("../img/icons/close-white.svg");
 }
 .grad-brd {
-  background: linear-gradient(
-    270deg,
-    #ff3333 1.74%,
-    #7b61ff 24.54%,
-    #ffcc33 50%,
-    #6633cc 76.1%,
-    #ff3333 100%
-  );
-  padding: 2px;
-}
-.white-fon {
-  display: inherit;
-  flex-wrap: inherit;
-  flex-direction: inherit;
-  flex-basis: 100%;
-  justify-content: inherit;
-  align-items: inherit;
   background-color: #fff;
+  /*Задание изображения для рамки*/
+  border-image-source: url("../img/icons/Линия.svg");
+  /*Я не понял, как это работает, но что то связано со стартовой позицией 
+    границы относительно изображения*/
+  border-image-slice: 1;
+  /*Толщина рамки*/
+  border-image-width: 2px;
+  /*Растягиваем изображение*/
+  border-image-repeat: stretch;
+  /*Чтобы не расширялся*/
+  box-sizing: border-box;
 }
 .slayder-tochki {
   display: none;
@@ -424,11 +419,11 @@ header .container {
   border-radius: 50%;
   cursor: pointer;
   /*Почему то не работает плавное появления изображения */
-  /* transition-property: background-image;
-  transition-duration: 2s;
-  transition-timing-function: ease-in;
-  transition-delay: 0;
- */
+}
+/*Чтобы градиент отображался после отступа контейнера*/
+main .container:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 46px;
 }
 /*
 оптимизироать количество кассов(проверить на повторение)

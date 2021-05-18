@@ -1,23 +1,4 @@
 <!DOCTYPE html>
-<!--
-ЗАПУСКАЕМ░░ 
-░ГУСЯ░▄▀▀▀▄░ГИДРУ░░ 
-▄███▀░◐░▄▀▀▀▄░░░░░░ 
-░░▄███▀░◐░░░░▌░░░ 
-░░░▐░▄▀▀▀▄░░░▌░░░░ 
-▄███▀░◐░░░▌░░▌░░░░ 
-░░░░▌░░░░░▐▄▄▌░░░░░ 
-░░░░▌░░░░▄▀▒▒▀▀▀▀▄ 
-░░░▐░░░░▐▒▒▒▒▒▒▒▒▀▀▄ 
-░░░▐░░░░▐▄▒▒▒▒▒▒▒▒▒▒▀▄ 
-░░░░▀▄░░░░▀▄▒▒▒▒▒▒▒▒▒▒▀▄ 
-░░░░░░▀▄▄▄▄▄█▄▄▄▄▄▄▄▄▄▄▄▀▄ 
-░░░░░░░░░░░▌▌░▌▌░░░░░ 
-░░░░░░░░░░░▌▌░▌▌░░░░░ 
-░░░░░░░░░▄▄▌▌▄▌▌░░░░░
-
-
--->
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
@@ -27,11 +8,7 @@
       rel="stylesheet"
     />
     <!--Переделать иконку-->
-    <link
-      rel="icon"
-      href="../img/icons/Bez_imeni-1.png"
-      type="image/png"
-    />
+    <link rel="icon" href="../img/icons/Bez_imeni-1.png" type="image/png" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/item.css" />
     <title>Игровая полочка</title>
@@ -41,16 +18,19 @@
       <div class="container">
         <div class="head">
           <a href="index.html"
-            ><img src="../img/icons/logo.svg" alt="" class="logo"
+            ><img
+              src="../img/icons/logo.svg"
+              alt="Игровая полочка"
+              class="logo"
           /></a>
           <div class="search-line">
-            <form class="search-form" name="@" method="GET" target="#">
+            <form class="search-form" name="@" method="GET" target="">
               <input type="text" placeholder="Search" class="search" />
-              <button type="submit" class="btn-search"></button>
+              <button type="submit" class="btn btn-search"></button>
             </form>
           </div>
           <div class="personal">
-            <a href="tel:+79999999999" class="block phone">+7(999)-999-99-99</a>
+            <a href="tel:+79999999999" class="phone">+7(999)-999-99-99</a>
             <a href="basket.html" class="icons basket"
               ><span class="number-of-goods">0</span>Корзина</a
             >
@@ -66,19 +46,19 @@
       <div class="container gradient">
         <nav class="nav">
           <ul class="list-buttons">
-            <li class="main-button">
+            <li class="main">
               <a href="#" class="item red"> Главная </a>
             </li>
-            <li class="main-button">
+            <li class="news">
               <a href="#" class="item purple"> Новости </a>
             </li>
-            <li class="main-button">
+            <li class="catalog">
               <a href="#" class="item yellow"> Каталог </a>
             </li>
-            <li class="main-button">
+            <li class="delivery">
               <a href="#" class="item purple"> Доставка </a>
             </li>
-            <li class="main-button">
+            <li class="help">
               <a href="#" class="item red"> Помощь </a>
             </li>
           </ul>
@@ -87,72 +67,122 @@
     </header>
     <main>
       <div class="container">
-        <div class="item-imgs">
-          <div class="main-img">
-            <button class="arrow left"></button>
+        <div class="product-photos">
+          <!--Визуальн скртые кноки для переключения фото-->
+          <input
+            class="change-photo"
+            type="radio"
+            name="change-photo"
+            id="change-photo-1"
+            checked
+          />
+          <input
+            class="change-photo"
+            type="radio"
+            name="change-photo"
+            id="change-photo-2"
+          />
+          <input
+            class="change-photo"
+            type="radio"
+            name="change-photo"
+            id="change-photo-3"
+          />
+          <input
+            class="change-photo"
+            type="radio"
+            name="change-photo"
+            id="change-photo-4"
+          />
+          <input
+            class="change-photo"
+            type="radio"
+            name="change-photo"
+            id="change-photo-5"
+          />
+          <div class="big-photos">
             <img
-              src="../img/picture/Имаджинариум.png"
+              src="../img/picture/Imag-1.jpg"
               alt="Большое изображение игры еее-бой"
-              class="active-img"
+              class="big-photo"
             />
-            <button class="arrow right"></button>
+            <img
+              src="../img/picture/Imag-2.jpg"
+              alt="Большое изображение игры еее-бой"
+              class="big-photo"
+            />
+            <img
+              src="../img/picture/Imag-3.jpg"
+              alt="Большое изображение игры еее-бой"
+              class="big-photo"
+            />
+            <img
+              src="../img/picture/Imag-4.jpg"
+              alt="Большое изображение игры еее-бой"
+              class="big-photo"
+            />
+            <img
+              src="../img/picture/Imag-5.jpg"
+              alt="Большое изображение игры еее-бой"
+              class="big-photo"
+            />
           </div>
-          <div class="mini-img">
-            <img
-              src="../img/picture/Маленький имаджинариум.png"
-              alt="Маленькое изображение игры еее-бой"
-              class="alt-img"
-            />
-            <img
-              src="../img/picture/Маленький имаджинариум.png"
-              alt="Маленькое изображение игры еее-бой"
-              class="alt-img"
-            />
-            <img
-              src="../img/picture/Маленький имаджинариум.png"
-              alt="Маленькое изображение игры еее-бой"
-              class="alt-img"
-            />
-            <img
-              src="../img/picture/Маленький имаджинариум.png"
-              alt="Маленькое изображение игры еее-бой"
-              class="alt-img"
-            />
-            <img
-              src="../img/picture/Маленький имаджинариум.png"
-              alt="Маленькое изображение игры еее-бой"
-              class="alt-img"
-            />
+          <div class="small-photos">
+            <label
+              class="small-photo small-photo-1"
+              for="change-photo-1"
+            ></label>
+            <label
+              class="small-photo small-photo-2"
+              for="change-photo-2"
+            ></label>
+            <label
+              class="small-photo small-photo-3"
+              for="change-photo-3"
+            ></label>
+            <label
+              class="small-photo small-photo-4"
+              for="change-photo-4"
+            ></label>
+            <label
+              class="small-photo small-photo-5"
+              for="change-photo-5"
+            ></label>
           </div>
         </div>
         <div class="product-info grad-brd">
-          <div class="white-fon">
-            <div class="top-block">
-              <h3 class="item-name">Имаджинариум</h3>
-              <span class="item-cost">1490 ₽</span>
+          <div class="top-block">
+            <h3 class="item-name">Имаджинариум</h3>
+            <span class="item-cost">1490 ₽</span>
+          </div>
+          <div class="middle-block">
+            <ul class="list-dop-info">
+              <li class="dop-info">
+                Количество игроков<span>4-7 игроков</span>
+              </li>
+              <li class="dop-info">
+                Возрастное ограничение<span>12+ лет</span>
+              </li>
+              <li class="dop-info">
+                Продолжительность партии<span>30+ минут</span>
+              </li>
+            </ul>
+          </div>
+          <div class="bottom-block">
+            <p class="sklad">
+              Товар на складе: <span class="kolvo">достаточно</span>
+            </p>
+            <div class="kolvo-tovarov">
+              <img src="../img/icons/minus.svg" alt="минус" class="minus" />
+              <span class="vibor-kolvo">1</span>
+              <!-- Картиночки сударь добавьте -->
+              <img src="../img/icons/plus.svg" alt="плюс" class="plus" />
             </div>
-            <div class="middle-block">
-              <span class="dop-info">Количество игроков</span>
-              <span class="dop-info dop-inf-right">4-7 игроков</span>
-              <span class="dop-info">Возрастное ограничение</span>
-              <span class="dop-info dop-inf-right">12+ лет</span>
-              <span class="dop-info">Продолжительность партии</span>
-              <span class="dop-info dop-inf-right">30+ минут</span>
-            </div>
-            <div class="bottom-block">
-              <p class="sklad">
-                Товар на складе: <span class="kolvo">достаточно</span>
-              </p>
-              <div class="kolvo-tovarov">
-                <img src="../img/icons/minus.svg" alt="минус" class="minus" />
-                <span class="vibor-kolvo">1</span>
-                <!-- Картиночки сударь добавьте -->
-                <img src="../img/icons/plus.svg" alt="плюс" class="plus" />
-              </div>
-              <a class="btn add-to-bsk buy">Добавить в корзину</a>
-            </div>
+            <a class="btn add-to-bsk buy">Добавить в корзину</a>
           </div>
         </div>
+      </div>
+      <div class="container">
         <div class="item-about">
           <h4 class="about-game">Об игре:</h4>
           <h5 class="subcharp">Описание:</h5>
@@ -166,126 +196,125 @@
             друзей и погружайтесь в волшебную атмосферу игры!
           </p>
           <h5 class="subcharp">Комлексация</h5>
-          <p class="desc">
-            --98 игровых карт <br />
-            --7 фигурок <br />
-            --49 карточек для голосования <br />
-            --Правила
-          </p>
+          <ul class="desc">
+            <li>--98 игровых карт</li>
+            <li>--7 фигурок</li>
+            <li>--49 карточек для голосования</li>
+            <li>--Правила</li>
+          </ul>
           <h5 class="subcharp">Правила:</h5>
-          <article class="desc">
-            <b>Начало</b>
-            <p>
-              Каждый игрок выбирает себе слона и набор карточек для голосования
-              того же цвета, что и слон. Карточек для голосования семь. Вам
-              пригодится столько карточек, сколько человек играет. Если играет 6
-              человек, карточка с номером 7 вам не нужна.
-            </p>
-            <b>Определение первого хода</b>
-            <p>
-              Вы должны определить, кто будет ходить первым. Вы можете
-              использовать для этого карточки для голосования. Все участники
-              берут свои карточки для голосования, перемешивают и вытягивают
-              любую карточку наугад. Первым начинает ходить тот, кто вытянул
-              карточку с наибольшим числом. Можно использовать любую другую
-              механику для выбора игрока, стартующего первым. Мы, например,
-              разыгрываем это право в шахматы. Дальше игра идет по часовой
-              стрелке.
-            </p>
-
-            <b>Ход игры</b>
-            <p>
-              Слоны всех игроков выставляются на игровое поле на облачко 1.
-              Колода с карточками-иллюстрациями перемешивается и каждому игроку
-              выдается на руки по 6 карточек. Игрок загадывает ассоциацию.
-              Каждый ход один из игроков становится ведущим. Ведущий загадывает
-              ассоциацию на одну из своих карточек, говорит эту ассоциацию вслух
-              остальным игрокам и выкладывает на стол загаданную карточку
-              рубашкой вверх.
-            </p>
-
-            <b>Угадывание карточки ведущего</b>
-            <p>
-              Основная задача игроков — угадать, какую именно из выложенных на
-              столе карточек загадал ведущий, и проголосовать за нее. Каждый
-              игрок выбирает одну карточку для голосования с нужным номером и
-              кладет рубашкой вверх. Ведущий не голосует и не комментирует
-              выложенные на столе картинки. Голосовать за свою собственную
-              картинку нельзя. Когда все приняли решение и проголосовали,
-              карточки для голосования переворачиваются и происходит подсчет
-              очков.
-            </p>
-
-            <b>Подсчет очков</b>
-            <p>
-              Игроки передвигают свои фишки на игровом поле на количество шагов,
-              соответствующее количеству выигранных очков.
-            </p>
-          </article>
+          <ul class="desc">
+            <li>
+              <b>Начало</b>
+              <p>
+                Каждый игрок выбирает себе слона и набор карточек для
+                голосования того же цвета, что и слон. Карточек для голосования
+                семь. Вам пригодится столько карточек, сколько человек играет.
+                Если играет 6 человек, карточка с номером 7 вам не нужна.
+              </p>
+            </li>
+            <li>
+              <b>Определение первого хода</b>
+              <p>
+                Вы должны определить, кто будет ходить первым. Вы можете
+                использовать для этого карточки для голосования. Все участники
+                берут свои карточки для голосования, перемешивают и вытягивают
+                любую карточку наугад. Первым начинает ходить тот, кто вытянул
+                карточку с наибольшим числом. Можно использовать любую другую
+                механику для выбора игрока, стартующего первым. Мы, например,
+                разыгрываем это право в шахматы. Дальше игра идет по часовой
+                стрелке.
+              </p>
+            </li>
+            <li>
+              <b>Ход игры</b>
+              <p>
+                Слоны всех игроков выставляются на игровое поле на облачко 1.
+                Колода с карточками-иллюстрациями перемешивается и каждому
+                игроку выдается на руки по 6 карточек. Игрок загадывает
+                ассоциацию. Каждый ход один из игроков становится ведущим.
+                Ведущий загадывает ассоциацию на одну из своих карточек, говорит
+                эту ассоциацию вслух остальным игрокам и выкладывает на стол
+                загаданную карточку рубашкой вверх.
+              </p>
+            </li>
+            <li>
+              <b>Угадывание карточки ведущего</b>
+              <p>
+                Основная задача игроков — угадать, какую именно из выложенных на
+                столе карточек загадал ведущий, и проголосовать за нее. Каждый
+                игрок выбирает одну карточку для голосования с нужным номером и
+                кладет рубашкой вверх. Ведущий не голосует и не комментирует
+                выложенные на столе картинки. Голосовать за свою собственную
+                картинку нельзя. Когда все приняли решение и проголосовали,
+                карточки для голосования переворачиваются и происходит подсчет
+                очков.
+              </p>
+            </li>
+            <li>
+              <b>Подсчет очков</b>
+              <p>
+                Игроки передвигают свои фишки на игровом поле на количество
+                шагов, соответствующее количеству выигранных очков.
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="container gradient">
         <h2 class="zagalovok">Похожие товары</h2>
         <div class="products">
           <div class="product grad-brd">
-            <div class="white-fon">
-              <a href="item.html" class="product-ref">
-                <img
-                  src="../img/picture/Имаджинариум.png"
-                  alt="Изображение игры"
-                  class="product-img"
-                />
-                <h3 class="product-name">Имаджинариум</h3>
-              </a>
-              <p class="product-des">Замечательная игра на ассоциации</p>
-              <p class="product-price">1490 ₽</p>
-              <a class="btn add-to-bsk" data-add="">Добавить в корзину</a>
-            </div>
+            <a href="item.html" class="product-ref">
+              <img
+                src="../img/picture/Imag-small.png"
+                alt="Изображение игры"
+                class="product-img"
+              />
+              <h3 class="product-name">Имаджинариум</h3>
+            </a>
+            <p class="product-des">Замечательная игра на ассоциации</p>
+            <p class="product-price">1490 ₽</p>
+            <a class="btn add-to-bsk" data-add="">Добавить в корзину</a>
           </div>
           <div class="product grad-brd">
-            <div class="white-fon">
-              <a href="item.html" class="product-ref">
-                <img
-                  src="../img/picture/Имаджинариум.png"
-                  alt="Изображение игры"
-                  class="product-img"
-                />
-                <h3 class="product-name">Имаджинариум</h3>
-              </a>
-              <p class="product-des">Замечательная игра на ассоциации</p>
-              <p class="product-price">1490 ₽</p>
-              <a class="btn add-to-bsk" data-add="">Добавить в корзину</a>
-            </div>
+            <a href="item.html" class="product-ref">
+              <img
+                src="../img/picture/Imag-small.png"
+                alt="Изображение игры"
+                class="product-img"
+              />
+              <h3 class="product-name">Имаджинариум</h3>
+            </a>
+            <p class="product-des">Замечательная игра на ассоциации</p>
+            <p class="product-price">1490 ₽</p>
+            <a class="btn add-to-bsk" data-add="">Добавить в корзину</a>
           </div>
           <div class="product grad-brd">
-            <div class="white-fon">
-              <a href="item.html" class="product-ref">
-                <img
-                  src="../img/picture/Имаджинариум.png"
-                  alt="Изображение игры"
-                  class="product-img"
-                />
-                <h3 class="product-name">Имаджинариум</h3>
-              </a>
-              <p class="product-des">Замечательная игра на ассоциации</p>
-              <p class="product-price">1490 ₽</p>
-              <a class="btn add-to-bsk" data-add="">Добавить в корзину</a>
-            </div>
+            <a href="item.html" class="product-ref">
+              <img
+                src="../img/picture/Imag-small.png"
+                alt="Изображение игры"
+                class="product-img"
+              />
+              <h3 class="product-name">Имаджинариум</h3>
+            </a>
+            <p class="product-des">Замечательная игра на ассоциации</p>
+            <p class="product-price">1490 ₽</p>
+            <a class="btn add-to-bsk" data-add="">Добавить в корзину</a>
           </div>
           <div class="product grad-brd">
-            <div class="white-fon">
-              <a href="item.html" class="product-ref">
-                <img
-                  src="../img/picture/Имаджинариум.png"
-                  alt="Изображение игры"
-                  class="product-img"
-                />
-                <h3 class="product-name">Имаджинариум</h3>
-              </a>
-              <p class="product-des">Замечательная игра на ассоциации</p>
-              <p class="product-price">1490 ₽</p>
-              <a class="btn add-to-bsk" data-add="">Добавить в корзину</a>
-            </div>
+            <a href="item.html" class="product-ref">
+              <img
+                src="../img/picture/Imag-small.png"
+                alt="Изображение игры"
+                class="product-img"
+              />
+              <h3 class="product-name">Имаджинариум</h3>
+            </a>
+            <p class="product-des">Замечательная игра на ассоциации</p>
+            <p class="product-price">1490 ₽</p>
+            <a class="btn add-to-bsk" data-add="">Добавить в корзину</a>
           </div>
         </div>
       </div>
@@ -348,5 +377,6 @@
     <div class="arrow-top"></div>
     <script src="../js/add-basket.js"></script>
     <script src="../js/scroll.js"></script>
+    <script src="../js/search.js"></script>
   </body>
 </html>
