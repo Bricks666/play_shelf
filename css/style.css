@@ -391,6 +391,8 @@ header .container {
 }
 .grad-brd {
   background-color: #fff;
+  /*Костыль, чтобы рама с градиентом оторажалась в хроме*/
+  border: 2px solid transparent;
   /*Задание изображения для рамки*/
   border-image-source: url("../img/icons/Линия.svg");
   /*Я не понял, как это работает, но что то связано со стартовой позицией 
