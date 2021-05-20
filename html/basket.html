@@ -66,20 +66,22 @@
       <div class="container">
         <h2 class="zagalovok">Оформление заказа</h2>
       </div>
-
       <section class="prds">
         <div class="container">
           <div class="prds-in-bsk">
-            <ul class="naming-row">
-              <li>Название</li>
-              <li>Стоимость</li>
-              <li>Кол-во</li>
-              <li>Итого</li>
-            </ul>
+            <div class="naming-columns">
+              <ul class="naming-columns-list">
+                <li class="name-game">Название</li>
+                <li class="price-game">Стоимость</li>
+                <li class="count-game">Кол-во</li>
+                <li class="total-game">Итого</li>
+              </ul>
+            </div>
+
             <div class="grad-brd">
-              <div class="white-fon prd-in-bsk">
+              <div class="prd-in-bsk">
                 <img
-                  src="../img/picture/Имаджинариум.png"
+                  src="../img/picture/Imag-1.jpg"
                   alt="Изображение продукта"
                   class="product-img"
                 />
@@ -90,7 +92,7 @@
                   <span class="vibor-kolvo">1</span>
                   <img src="../img/icons/plus.svg" alt="плюс" class="plus" />
                 </div>
-                <span class="product-price itog">1490 ₽</span>
+                <span class="product-price total-price">1490 ₽</span>
               </div>
             </div>
           </div>
@@ -98,7 +100,6 @@
       </section>
       <section class="Kupon-block">
         <div class="container">
-          <!-- Сделать обязательно по другому купон пока просто скопирывал поиск-->
           <form class="Kupon" name="@" method="GET" target="">
             <input
               type="text"
@@ -110,160 +111,136 @@
         </div>
       </section>
       <form id="deliveri" method="POST" action="">
-        <fieldset class="deliveri" form="deliveri">
+        <fieldset form="deliveri">
           <div class="container">
-            <div class="vibor-dostavki grad-brd">
-              <div class="white-fon">
-                <h3 class="sub-zagalovok">Доставка</h3>
+            <div class="form-block grad-brd">
+              <h3 class="sub-zagalovok">Доставка</h3>
+              <div class="type-of-delivery">
+                <input
+                  type="radio"
+                  name="slayder"
+                  class="slayder-tochki"
+                  id="var-1"
+                />
+                <input
+                  type="radio"
+                  name="slayder"
+                  class="slayder-tochki"
+                  id="var-2"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="slayder"
+                  class="slayder-tochki"
+                  id="var-3"
+                />
                 <div class="slayder">
-                  <ul class="sposob">
-                    <li>
-                      <input
-                        type="radio"
-                        name="slayder"
-                        class="slayder-tochki"
-                        id="item-1"
-                      /><label class="black-circle" for="item-1"
-                        >Самовывоз</label
-                      >
-                      <span>1 gas</span>
-                    </li>
-                    <li>
-                      <input
-                        type="radio"
-                        name="slayder"
-                        class="slayder-tochki"
-                        id="item-2"
-                        checked
-                      /><label class="black-circle" for="item-2"
-                        >Доставка курьером</label
-                      >
-                      <span>1 gas</span>
-                    </li>
-                    <li>
-                      <input
-                        type="radio"
-                        name="slayder"
-                        class="slayder-tochki"
-                        id="item-3"
-                      /><label class="black-circle" for="item-3"
-                        >Доставка почтой</label
-                      >
-                      <span>1 gas</span>
-                    </li>
-                  </ul>
+                  <label for="var-1">Самовывоз</label>
+                  <label for="var-2">Доставка курьером</label>
+                  <label for="var-3">Доставка почтой</label>
                 </div>
-                <div class="poisk">
+              </div>
+              <div class="poisk">
+                <input
+                  type="text"
+                  placeholder="Пожалуйста, введите адрес доставки"
+                  class="poisk-stroka"
+                  required
+                />
+              </div>
+              <div class="dop-info">
+                <h5 class="name-dop">Дополнительная информация</h5>
+                <textarea class="text-area" form="deliveri"></textarea>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset form="deliveri">
+          <div class="container">
+            <div class="form-block grad-brd">
+              <h3 class="sub-zagalovok">Контактные данные</h3>
+              <div class="polay">
+                <div class="pol-group">
+                  <label for="name">Имя*</label>
+                  <input id="name" type="text" class="polay-vvod" required />
+                </div>
+                <div class="pol-group">
+                  <label for="firstname">Фамилия*</label>
                   <input
+                    id="firstname"
                     type="text"
-                    placeholder="Пожалуйста, введите адрес доставки"
-                    class="poisk-stroka"
+                    class="polay-vvod"
                     required
                   />
                 </div>
-                <div class="dop-info">
-                  <h5 class="name-dop">Дополнительная информация</h5>
-                  <textarea class="text-area" form="deliveri"></textarea>
+                <div class="pol-group">
+                  <label for="dadname">Отчество</label>
+                  <input id="dadname" type="text" class="polay-vvod" />
                 </div>
+                <div class="pol-group">
+                  <label for="email">E-mail</label>
+                  <input id="email" type="email" class="polay-vvod" />
+                </div>
+                <div class="pol-group">
+                  <label for="tel">Телефон*</label>
+                  <input id="tel" type="tel" class="polay-vvod" required />
+                </div>
+                <span class="star">* - обязательне для заполнения поля</span>
+              </div>
+              <div class="sogl">
+                <input type="checkbox" id="ofert" /><label
+                  for="ofert"
+                  class="checkbox"
+                  >С публично офертой ознакомлен и согласен</label
+                >
+                <input type="checkbox" id="pers-data" /><label
+                  for="pers-data"
+                  class="checkbox"
+                  >Даю согласие на обработку персональных данных</label
+                >
               </div>
             </div>
           </div>
         </fieldset>
         <fieldset form="deliveri">
           <div class="container">
-            <div class="contact grad-brd">
-              <div class="white-fon">
-                <h3 class="sub-zagalovok">Контактные данные</h3>
-                <div class="polay">
-                  <div class="pol-group">
-                    <label for="name">Имя*</label>
-                    <input id="name" type="text" class="polay-vvod" required />
-                  </div>
-                  <div class="pol-group">
-                    <label for="firstname">Фамилия*</label>
-                    <input
-                      id="firstname"
-                      type="text"
-                      class="polay-vvod"
-                      required
-                    />
-                  </div>
-                  <div class="pol-group">
-                    <label for="dadname">Отчество</label>
-                    <input id="dadname" type="text" class="polay-vvod" />
-                  </div>
-                  <div class="pol-group">
-                    <label for="email">E-mail</label>
-                    <input id="email" type="email" class="polay-vvod" />
-                  </div>
-                  <div class="pol-group">
-                    <label for="tel">Телефон*</label>
-                    <input id="tel" type="tel" class="polay-vvod" required />
-                  </div>
-                  <span class="star">* - обязательне для заполнения поля</span>
-                </div>
-                <div class="sogl">
-                  <input type="checkbox" id="ofert" /><label
-                    for="ofert"
-                    class="checkbox"
-                    >С публично офертой ознакомлен и согласен</label
-                  >
-                  <input type="checkbox" id="pers-data" /><label
-                    for="pers-data"
-                    class="checkbox"
-                    >Даю согласие на обработку персональных данных</label
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </fieldset>
-        <fieldset form="deliveri">
-          <div class="container">
-            <div class="pay grad-brd">
-              <div class="white-fon">
-                <h3 class="sub-zagalovok">Способ оплаты</h3>
+            <div class="form-block grad-brd">
+              <h3 class="sub-zagalovok">Способ оплаты</h3>
+              <div class="type-of-pay">
+                <input
+                  type="radio"
+                  name="slayder"
+                  class="slayder-tochki"
+                  id="card-on"
+                />
+                <input
+                  type="radio"
+                  name="slayder"
+                  class="slayder-tochki"
+                  id="card-off"
+                />
+                <input
+                  type="radio"
+                  name="slayder"
+                  class="slayder-tochki"
+                  id="cash"
+                  checked
+                />
                 <div class="slayder">
-                  <ul class="sposob">
-                    <li>
-                      <input
-                        type="radio"
-                        name="slayder"
-                        class="slayder-tochki"
-                        id="card-on"
-                      /><label class="black-circle" for="card-on"
-                        >Картой онлайн</label
-                      >
-                    </li>
-                    <li>
-                      <input
-                        type="radio"
-                        name="slayder"
-                        class="slayder-tochki"
-                        id="card-off"
-                      /><label class="black-circle" for="card-off"
-                        >Картой при получении</label
-                      >
-                    </li>
-                    <li>
-                      <input
-                        type="radio"
-                        name="slayder"
-                        class="slayder-tochki"
-                        id="cash"
-                        checked
-                      /><label class="black-circle" for="cash">Наличными</label>
-                    </li>
-                  </ul>
+                  <label for="card-on">Картой онлайн</label>
+                  <label for="card-off">Картой при получении</label>
+                  <label for="cash">Наличными</label>
                 </div>
-                <div class="about-pay"></div>
               </div>
+
+              <div class="about-pay"></div>
             </div>
           </div>
         </fieldset>
 
         <div class="container cnt2 gradient">
-          <button type="submit" class="t btn-accept" form="deliveri">
+          <button type="submit" class="btn btn-accept" form="deliveri">
             Оформить заказ
           </button>
         </div>
@@ -279,7 +256,9 @@
             <li class="item-menu">
               Навигация
               <ul class="submenu">
-                <li><a class="submenu-item" href="../index.html">Главная</a></li>
+                <li>
+                  <a class="submenu-item" href="../index.html">Главная</a>
+                </li>
                 <li><a class="submenu-item">О нас</a></li>
                 <li><a class="submenu-item">Помощь</a></li>
                 <li><a class="submenu-item">Личный кабинет</a></li>
