@@ -46,20 +46,23 @@ header {
 }
 .container {
   width: 1200px;
-  box-sizing: border-box;
-  padding-right: 58px;
-  padding-left: 72px;
-  margin: 0 auto;
-  margin-bottom: 42px;
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto;
+  margin-bottom: 42px;
+  box-sizing: border-box;
+}
+/*Чтобы градиент отображался после отступа контейнера*/
+main .container:last-child {
+  margin-bottom: 0;
+  padding-bottom: 46px;
 }
 .zagalovok {
   font-weight: 500;
   font-size: 48px;
   line-height: 200%;
   letter-spacing: 0.15em;
-  margin-left: -13px;
+  margin-left: 59px;
   margin-bottom: 36px;
   flex-basis: 100%;
 }
@@ -85,12 +88,27 @@ header {
   background-color: #fff;
   cursor: pointer;
 }
+.grad-brd {
+  background-color: #fff;
+  /*Костыль, чтобы рама с градиентом оторажалась в хроме*/
+  border: 2px solid transparent;
+  /*Задание изображения для рамки*/
+  border-image-source: url("../img/icons/Линия.svg");
+  /*Я не понял, как это работает, но что то связано со стартовой позицией 
+    границы относительно изображения*/
+  border-image-slice: 1;
+  /*Толщина рамки*/
+  border-image-width: 2px;
+  /*Растягиваем изображение*/
+  border-image-repeat: stretch;
+  /*Чтобы не расширялся*/
+  box-sizing: border-box;
+}
 
 /*Шапка*/
 
 header .container {
-  padding: 0;
-  margin: 0 auto;
+  margin-bottom: 0;
 }
 .head {
   display: inherit;
@@ -219,6 +237,25 @@ header .container {
   border-bottom-style: solid;
 }
 
+/* СЛАЙДЕР */
+.slayder-tochki {
+  display: none;
+}
+.slayder label::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-size: 14px 14px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  border-radius: 50%;
+  cursor: pointer;
+  /*Почему то не работает плавное появления изображения */
+}
+
 /*Подвал*/
 .footer-top {
   flex-basis: 100%;
@@ -299,6 +336,8 @@ header .container {
   background-size: contain;
   background-repeat: no-repeat;
 }
+
+
 /*Стрелка наверх*/
 .arrow-top {
   display: none;
@@ -317,14 +356,15 @@ header .container {
 .show {
   display: inline-block;
 }
-/*Популярные товары*/
 
+/*КАРТОЧКА ТОВАРА*/
 .products {
   display: grid;
   grid-template-columns: repeat(4, 200px);
   row-gap: 150px;
   column-gap: 90px;
   margin-bottom: 64px;
+  margin-left: 72px;
 }
 .product {
   display: flex;
@@ -389,44 +429,7 @@ header .container {
 .delete-btn:hover {
   background-image: url("../img/icons/close-white.svg");
 }
-.grad-brd {
-  background-color: #fff;
-  /*Костыль, чтобы рама с градиентом оторажалась в хроме*/
-  border: 2px solid transparent;
-  /*Задание изображения для рамки*/
-  border-image-source: url("../img/icons/Линия.svg");
-  /*Я не понял, как это работает, но что то связано со стартовой позицией 
-    границы относительно изображения*/
-  border-image-slice: 1;
-  /*Толщина рамки*/
-  border-image-width: 2px;
-  /*Растягиваем изображение*/
-  border-image-repeat: stretch;
-  /*Чтобы не расширялся*/
-  box-sizing: border-box;
-}
-.slayder-tochki {
-  display: none;
-}
-.slayder label::before {
-  content: "";
-  display: inline-block;
-  position: relative;
-  width: 20px;
-  height: 20px;
-  background-size: 14px 14px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  box-sizing: border-box;
-  border-radius: 50%;
-  cursor: pointer;
-  /*Почему то не работает плавное появления изображения */
-}
-/*Чтобы градиент отображался после отступа контейнера*/
-main .container:last-of-type {
-  margin-bottom: 0;
-  padding-bottom: 46px;
-}
+
 /*
 оптимизироать количество кассов(проверить на повторение)
 (；￣Д￣)сделать блок новинок(￣ ￣|||)

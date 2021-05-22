@@ -1,20 +1,23 @@
 /*Блок новинок*/
-.zagalovok-new {
-  color: #fff;
-  line-height: 100%;
-  text-shadow: rgb(0, 0, 0) 0px 0px 8px;
-  position: absolute;
-  top: 53px;
-  left: 38px;
-  /*Чтобы было видно на слайдере(у врубленного z-index = 1)*/
-  z-index: 2;
-  cursor: default;
-}
 .new-items .container {
   position: relative;
   padding: 0;
   padding-top: 30px;
 }
+.zagalovok-new {
+  color: #fff;
+  line-height: 100%;
+  text-shadow: rgb(0, 0, 0) 0px 0px 8px;
+
+  position: absolute;
+  top: 53px;
+  left: 38px;
+  margin-left: 0;
+  /*Чтобы было видно на слайдере(у врубленного z-index = 1)*/
+  z-index: 2;
+  cursor: default;
+}
+
 .new-products {
   /*Наследуем родительское позиционирование, чтобы не писать повторно*/
   position: inherit;

@@ -1,6 +1,11 @@
-.container {
+main .container {
   padding-left: 145px;
   padding-right: 151px;
+}
+main > .container:first-child {
+  padding: 0;
+  padding-top: 45px;
+  margin-bottom: 0;
 }
 .prds {
   margin-bottom: 32px;
@@ -13,14 +18,12 @@
   grid-template-columns: auto [naming-start] 566px [naming-end] 52px;
 }
 .naming-columns-list {
-  display: grid;
-  grid-template-columns:
-    [name-start] max-content [name-end] 87px [price-start]
-    max-content [price-end] 88px [count-start] max-content [count-end] 72px [total-start]
-    max-content [total-end];
-  justify-items: center;
   grid-column-start: naming-start;
   grid-column-end: naming-end;
+
+  display: flex;
+  justify-content: space-between;
+
   margin-bottom: 20px;
 }
 .naming-columns-list li {
@@ -309,7 +312,6 @@ fieldset {
 }
 .cnt2 {
   justify-content: center;
-  margin-bottom: 280px;
 }
 .btn-accept {
   width: 260px;
